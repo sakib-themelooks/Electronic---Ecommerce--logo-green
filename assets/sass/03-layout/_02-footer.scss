@@ -1,0 +1,145 @@
+/* ************************
+   03.2: Footer
+   ********************* */
+
+footer{
+   margin-top: 100px;
+   background: #131A22;
+   padding-top: 60px;
+   @media (max-width:575px) {
+      margin-top: 50px;
+   }
+
+   .bottom-navigation{
+      ul{
+         margin-left: 10px;
+         display: flex;
+         @media (max-width:767px) {
+            flex-direction: column;
+            justify-content: center !important;
+            margin-left: 0 !important;
+            li{
+               margin-right: 0 !important;
+               margin-bottom: 10px;
+            }
+         }
+         li{
+            &:not(:last-child){
+               margin-right: 60px !important;
+            }
+            @media (max-width:1400px) {
+               &:not(:last-child){
+                  margin-right: 30px !important;
+               }
+            }
+            @media (max-width:767px){
+               &:not(:last-child){
+                  margin-right: 0px !important;
+               }
+            }
+            a{
+               color: $white;
+               position: relative;
+               font-weight: $medium;
+               &::after{
+                  content: "";
+                  position: absolute;
+                  top: 40%;
+                  transform: translateY(-40%);
+                  left: -9px;
+                  width: 4px;
+                  height: 4px;
+                  border-radius: 50%;
+                  background: $green;
+                  transition: .4s;
+                  transform: scale(1);
+               }
+               &:hover{
+                  &:after{
+                     transform: scale(1.5);
+                  }
+               }
+            }
+         }
+      }
+      p{
+         color: #B2B2B2;
+         @media (max-width:1200px) {
+            text-align: center;
+         }
+      }
+   }
+
+   .subscribe{
+      width: 100%;
+      position: relative;
+      display: flex;
+      @media (max-width:575px) {
+         .subscribeInput, .subscribeButton{
+            padding: 15px !important;
+         }
+      }
+      .subscribeInput{
+         width: 100%;
+         border: none;
+         padding: 20px;
+         outline: none;
+         color: $light-ash;
+         background: #1F252D;
+         &::placeholder{
+            font-size: 16px;
+         }
+      }
+      .subscribeButton {
+         padding:20px;
+         background: $green;
+         cursor: pointer;
+         transition: .4s;
+         &:hover{
+            background: $text-color;
+         }
+       }
+   }
+   @media (max-width:1200px) {
+      .f-main{
+         display: flex;
+         justify-content: center;
+      }
+      .bottom-navigation{
+         text-align: center;
+      }
+      .subscribe{
+         max-width: 500px;
+      }
+   }
+   .footer-bottom{
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px 0;
+      color: #B2B2B2;
+      .line{
+         width: 1px;
+         height: 20px;
+         background: #b2b2b277;
+         margin: 0 20px;
+      }
+      .main{
+         @media (max-width:991px) {
+            flex-direction: column;
+            .left{
+               justify-content: center;
+               margin-bottom: 20px;
+               
+            }
+            .middle{
+               display: flex;
+               justify-content: center;
+               margin-bottom: 20px;
+            }
+            .right{
+               display: flex;
+               justify-content: center;
+            }
+         }
+      }
+   }
+}

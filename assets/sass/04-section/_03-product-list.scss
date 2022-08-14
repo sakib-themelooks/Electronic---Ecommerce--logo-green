@@ -1,0 +1,226 @@
+#porduct-list{
+    .category{
+        .category-title{
+            background: $green;
+            padding: 20px 30px;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            transition: .4s;
+            @media (max-width:767px){
+                border-radius: 10px !important;
+            }
+            @media (max-width:575px){
+                padding: 10px 20px;
+            }
+            
+            p{
+                font-size: 24px;
+                color: $text-color;
+                font-weight: $medium;
+                @media (max-width:767px) {
+                    font-size: 20px !important;
+                }
+                 @media (max-width:575px) {
+                    font-size: 16px !important;
+                }
+            }
+        }
+        .category-list{
+            padding: 30px;
+            border: 1px solid $light-ash;
+            border-radius: 0 0 10px 10px;
+            overflow: hidden;
+            position: relative;
+            transition: .4s;
+            @media (max-width:991px) {
+                display: none;     
+                border-radius: 10px !important;          
+            }
+            &:after{
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 0;
+                background: $white;
+                width: 100%;
+                height: 45px;
+                box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.02);
+            }
+            ul{
+                margin-bottom: 0;
+                height: 685px;
+                overflow: scroll;
+                scrollbar-width: none; 
+                -ms-overflow-style: none;
+                li{
+                    margin-bottom: 28px;
+                    
+                    a{
+                        font-size: 18px;
+                        transition: .4s;
+                        &:hover{
+                            color: $green;
+                        }
+                        @media (max-width:575px) {
+                            font-size: 14px !important;
+                        }
+                    }
+                }
+            }
+            .bottom{
+                width: 100%;
+                height: 45px;
+                background: #000;
+            }
+        }
+    }
+    .item-details{
+        .item-inner-category{
+            margin-bottom: 30px;
+            ul{
+                margin-bottom: 0 !important;
+                flex-wrap: wrap;
+                li{
+                    margin: 0 30px;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    @media (max-width:356px) {
+                        &:last-child{
+                            margin-top: -10px;
+                        }
+                    }
+                    @media(max-width:1200px) {
+                        margin: 0 15px;
+                    }
+                    @media(max-width:991px) {
+                        margin: 30px 15px;
+                    }
+                    @media(max-width:767px) {
+                        margin: 15px 10px;
+                        a{
+                            font-size: 14px !important;
+                        }
+                    }
+                    a{
+                        font-size: 18px;
+                        transition: .4s;
+                        &:hover{
+                            color: $green;
+                        }
+                    }
+                }
+                @media (max-width:515px) {
+                    justify-content: center;
+                }
+            }
+            .see-more-btn{
+                padding: 11px 30px;
+                background: $green;
+                color: $text-color;
+                border-radius: 50px;
+                transition: .4s;
+                &:hover{
+                    background: $text-color;
+                    color: $white;
+                }
+                @media(max-width:767px){
+                    padding: 8px 20px;
+                }
+            }
+            @media (max-width:515px) {
+                flex-direction: column;
+            }
+        }
+        .card-item{
+            border: 1px solid $light-ash;
+            border-radius: 10px;
+            padding: 0 30px 30px 30px;
+            transition: .4s;
+            @media (max-width:575px) {
+                padding: 0 10px 10px 10px;
+            }
+            &:hover{
+                box-shadow: 0 0 45px rgba(0, 0, 0, 0.05);
+            }
+            .top{
+                position: relative;
+                .favourite{
+                    position: absolute;
+                    top: 20px;
+                    right: -5px;
+                    color: #D9D9D9;
+                    cursor: pointer;
+                    @media (max-width:575px) {
+                        top: 5px;
+                        right: 0;
+                    }
+                }
+            }
+            .details{
+                .item-name{
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-weight: $medium;
+                    display: inline-block;
+                    margin-bottom: 20px;
+                    transition: .3s;
+                    max-height: 60px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &:hover{
+                        color: $green;
+                    }
+                    @media (max-width:575px){
+                        font-size: 16px;
+                        line-height: 20px;
+                        margin-bottom: 10px;
+                    }
+                    @media (max-width:416px){
+                        width: 114px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                }
+                .bottom{
+                    p{
+                        font-size: 18px;
+                        font-weight: $medium;
+                        @media (max-width:575px){
+                            font-size: 12px;
+                        }
+                        .amount{
+                            color: $green;
+                            @media (max-width:575px){
+                                font-size: 12px !important;
+                            }
+                            sup{
+                                font-size: 60%;
+                                right: 5px;
+                            }
+                        }
+                    }
+                    .add-cart{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background: $text-color;
+                        transition: .4s;
+                        &:hover{
+                            background: $green;
+                        }
+                        @media (max-width:360px) {
+                            width: 20px;
+                            height: 20px;
+                            img{
+                                width: 10px;
+                                height: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

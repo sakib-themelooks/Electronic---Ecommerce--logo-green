@@ -1,0 +1,14 @@
+.br{
+    border-right: 2px solid $light-ash;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color-green{
+    color: $green;
+}
+.bg-green{
+    background: $green;
+}
